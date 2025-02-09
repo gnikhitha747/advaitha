@@ -58,14 +58,7 @@ body {
 .nav-links a:hover{
   color:rgba(235, 149, 180, 1) ;
 }
-.heroo{
-  color: rgba(251, 220, 217, 1);
-  font-size: 24px;
-  position: relative;
-  text-align: center;
-  width: 78%;
-  margin: 0px 40px 50px 40px;
-  letter-spacing: 1px;
+
  
 .hero{
   color: rgba(251, 220, 217, 1);
