@@ -58,16 +58,15 @@ body {
 .nav-links a:hover{
   color:rgba(235, 149, 180, 1) ;
 }
-
- 
 .hero{
   color: rgba(251, 220, 217, 1);
   font-size: 24px;
-  position: relative;
+  position: absolute;
   text-align: center;
-  width: 78%;
-  margin: 0px 40px 50px 40px;
+  max-width: 100%;
+  margin: 3px 40px 50px 40px;
   letter-spacing: 1px;
+  top: 130px;
  
 }
 
@@ -75,11 +74,11 @@ body {
   color: rgba(251, 220, 217, 1);
   font-size: 17px;
   text-align: center;
-  width: 57%;
+  width: 80%;
   position: relative;
   left: 50%;
-  top: 80px;
-  padding-bottom: 55px;
+  top: 170px;
+  padding-bottom: 90px;
   transform: translate(-50%, -50%); 
 
 }
@@ -107,6 +106,7 @@ body {
   letter-spacing: 1px;
   text-align: center;
   left: 50%;
+  top: 80px;
   transform: translate(-50%, -50%); 
   border: none;
   transition:  0.1s ease; 
