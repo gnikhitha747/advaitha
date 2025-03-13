@@ -77,9 +77,6 @@ function sendEmail(product, price) {
     window.location.href = `mailto:advaithabeadsyourway@gmail.com?subject=${subject}&body=${body}`;
 }
 
-const hamMenu = document.querySelector('.ham-menu');
-const menu = document.querySelector('.menu');
-
 document.querySelector(".try").addEventListener("click", function() {
     document.getElementById("Customize").scrollIntoView({ behavior: "smooth" });
 });
