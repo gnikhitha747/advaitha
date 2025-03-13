@@ -5,23 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advaitha - Beads your way</title>
     <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-
       <div class="navbar">
-        <div class="name"> Advaitha</div>
-        <div class="sub">Beads your way</div>
-        <div class="logo"> <img src="logo.jpeg" alt="logo" class="logo-img"> </div>
-        <div class="navbar">
+        
+        <div class="menu">
         <ul class="nav-links">
             <li><a href="#About">About</a></li>
             <li><a href="#Products">Products</a></li>
             <li><a href="#Contact_us">Contact us</a></li>
           </ul>
+        </div>
+        <nav>
+         
+        <div class="name"> Advaitha</div>
+        <div class="sub">Beads your way</div>
+        <div class="logo"> <img src="logo.jpeg" alt="logo" class="logo-img"> </div>
+        <div class="ham-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+           </div>
+        </nav>
+        <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
         <div class="hero">
            Elegance in every detail.  
           Customize the way you want
@@ -34,7 +44,7 @@
         <p class="discover"> Discover our handcrafted bracelets that tell your story.Timeless customized designs, crafted with love and care for you</p>
       </div>
        
-    </header>
+ 
 
     <section id="About">
 
@@ -43,34 +53,69 @@
       </div>
 
     </section>
+ 
 
     <section id="Products">
 
-      <div class="pro"> Products</div>
+      <div class="pro"> Products</div >
 
-      <div class="bracelets">
-
-        <div><img src="1.jpeg" alt="products" class="pro-img"></div>
-        <div class="dis">&#8226; Adding a touch of classic charm to your day<p class=" price" >  Prices: 99/-</p > <p class="stock"> in stock</p> 
-            <div class ="buy"><button class="buy-btn" onclick="sendEmail('#IDPG01', '99')">Buy &rarr;</button></div></div>
-
-        <div><img src="2.jpeg" alt="products" class="pro-img"></div>
-        <div class="dis">&#8226; Elegance in every pearl <p class=" price" >  Prices: 99/-</p> <p class="stock"> in stock</p> 
-            <div class ="buy"><button class="buy-btn" onclick="sendEmail('#IDPG01', '99')">Buy &rarr;</button></div> </div>
-
-        <div><img src="3.jpeg" alt="products" class="pro-img"></div>
-        <div class="dis">&#8226; Because simple elegance is always in style <p class=" price" >  Prices: 89/-</p> <p class="stock"> in stock</p> 
-            <div class ="buy"><button class="buy-btn" onclick="sendEmail('#IDBN03', '89')">Buy &rarr;</button></div> </div>
-
-        <div><img src="4.jpeg" alt="products" class="pro-img"></div>
-        <div class="dis">&#8226; Sometimes all you need is a little pink<p class=" price" >  Prices: 99/-</p> <p class="stock"> in stock</p> 
-            <div class ="buy"><button class="buy-btn" onclick="sendEmail('#IDBN04', '99')">Buy &rarr;</button></div> </div>
-
-        <div><img src="5.jpeg" alt="products" class="pro-img"></div>
-        <div class="dis">&#8226; Beaded and beautiful<p class=" price" >  Prices: 89/-</p> <p class="stock"> in stock</p>
-             <div class ="buy"></div><button class="buy-btn" onclick="sendEmail('#IDBN05', '89')">Buy &rarr;</button></div></div>
-
-      </div>
+        <div class="bracelets">
+          <div class="whole">
+            <img src="1.jpeg" alt="products" class="pro-img">
+            <div class="dis">Adding a touch of luminous elegance to your day, where the timeless beauty of pearls meets the gentle glow of sophistication<p class="price">Prices: 99/-</p><p class="stock">in stock</p>
+              <div class="buy"><button class="buy-btn" onclick="sendEmail('#IDPG01', '99')">Buy &rarr;</button></div>
+            </div>
+          </div>
+        
+          <div class="whole">
+            <img src="2.jpeg" alt="products" class="pro-img">
+            <div class="dis">Like a string of pearls against moonlit waves, bringing a soft, radiant charm to every moment<p class="price">Prices: 99/-</p><p class="stock">in stock</p>
+              <div class="buy"><button class="buy-btn" onclick="sendEmail('#IDPG02', '99')">Buy &rarr;</button></div>
+            </div>
+          </div>
+        
+          <div class="whole">
+            <img src="3.jpeg" alt="products" class="pro-img">
+            <div class="dis">Drifting through time with a glow that never dims, pearls capture the essence of elegance in its purest form<p class="price">Prices: 89/-</p><p class="stock">in stock</p>
+              <div class="buy"><button class="buy-btn" onclick="sendEmail('#IDBN03', '89')">Buy &rarr;</button></div>
+            </div>
+          </div>
+        
+          <div class="whole">
+            <img src="4.jpeg" alt="products" class="pro-img">
+            <div class="dis">Infused with the soft blush of dawn, pink beads and luminous pearls create a symphony of elegance and warmth.<p class="price">Prices: 99/-</p><p class="stock">in stock</p>
+              <div class="buy"><button class="buy-btn" onclick="sendEmail('#IDBN04', '99')">Buy &rarr;</button></div>
+            </div>
+          </div>
+        
+          <div class="whole">
+            <img src="5.jpeg" alt="products" class="pro-img">
+            <div class="dis">A delicate balance of creamy pearls and verdant green beads, capturing the essence of elegance and renewal<p class="price">Prices: 89/-</p><p class="stock">in stock</p>
+              <div class="buy"><button class="buy-btn" onclick="sendEmail('#IDBN05', '89')">Buy &rarr;</button></div>
+            </div>
+          </div>
+        
+          <div class="whole">
+            <img src="6.jpeg" alt="products" class="pro-img">
+            <div class="dis">Like a whisper of starlight woven into delicate strands, each bead glows with a gentle luminescence, casting a serene elegance that dances with every movement<p class="price">Prices: 89/-</p><p class="stock">in stock</p>
+              <div class="buy"><button class="buy-btn" onclick="sendEmail('#IDBN06', '89')">Buy &rarr;</button></div>
+            </div>
+          </div>
+        
+          <div class="whole">
+            <img src="7.jpeg" alt="products" class="pro-img">
+            <div class="dis">Like a cascade of moonlight spilling over a tranquil sea, this necklace drapes gracefully, each bead a shimmering droplet of timeless beauty, capturing the essence of celestial elegance<p class="price">Prices: 120/-</p><p class="stock">in stock</p>
+              <div class="buy"><button class="buy-btn" onclick="sendEmail('#IDBG07', '120')">Buy &rarr;</button></div>
+            </div>
+          </div>
+        
+          <div class="whole">
+            <img src="8.jpeg" alt="products" class="pro-img">
+            <div class="dis">A symphony of pearls and precious stones, this necklace flows like a river of dreams, its delicate curves embracing your neck with a touch of understated sophistication and radiant charm.<p class="price">Prices: 120/-</p><p class="stock">in stock</p>
+              <div class="buy"><button class="buy-btn" onclick="sendEmail('#IDPG08', '120')">Buy &rarr;</button></div>
+            </div>
+          </div>
+        </div>
 
     </section>
     
