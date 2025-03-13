@@ -3,7 +3,7 @@ body {
     padding: 0;
     background-color: #ffffff;
     color: #333;
-    font-family: "neucha", serif;
+    font-family: "neucha";
     font-weight: 400;
     font-style: normal;
     width: 100%;
@@ -11,31 +11,47 @@ body {
     
     
 }
+
+
 .name {
   font-size: 32px;
-  color: rgba(235, 149, 180, 1);
+  color: rgba(255, 143, 184, 1);
   letter-spacing: 1px;
   position: relative;
-  padding-left: 60px;
-  top: 30px;
-
+  padding-left: 84px;
+  top: 20px;
 }
   
 .sub {
   font-size: 14px;
   color: rgba(251, 220, 217, 1);
-  position: relative;
-  padding-left: 60px;
-  top: 22px;
+  position: absolute;
+  padding-left: 84px;
+  top: 70px;
+ 
 }
+@media (min-width: 750px) {
+  .name{
+    font-size: 58px;
+    top: 20px;
+    padding-left: 130px;
+  }
+  .sub{
+    font-size: 22px;
+    padding-left: 136px;
+    top: 96px;
 
-
+  }
+ 
+}
 .navbar{
   background-color: black;
   padding-bottom: 8px;
+  margin-top: -30px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); 
   
 }
+
 .nav-links{
   list-style: none;
   display: flex;
@@ -43,10 +59,8 @@ body {
   margin-right: 0px;
   justify-content: flex-end;
   right: 13px;
-  position: relative;
-  top: -58px;
-  
-
+  position:relative;
+  top: 84px;
 }
 .nav-links a{
   color: rgba(251, 220, 217, 1);
@@ -58,16 +72,20 @@ body {
 .nav-links a:hover{
   color:rgba(235, 149, 180, 1) ;
 }
+@media (min-width: 750px) {
+.nav-links a{
+  font-size: 18px;
+}}
 .hero{
   color: rgba(251, 220, 217, 1);
-  font-size: 24px;
-  position: absolute;
+  font-size: 28px;
   text-align: center;
-  max-width: 100%;
-  margin: 3px 40px 50px 40px;
-  letter-spacing: 1px;
-  top: 130px;
- 
+  width: 80%;
+  position: relative;
+  left: 50%;
+  top: 160px;
+  padding-bottom: 100px;
+  transform: translate(-50%, -50%); 
 }
 
 .discover{
@@ -77,21 +95,24 @@ body {
   width: 80%;
   position: relative;
   left: 50%;
-  top: 170px;
-  padding-bottom: 90px;
-  transform: translate(-50%, -50%); 
+  top: 100px;
+  padding-bottom: 80px;
+  transform: translate(-50%, -50%);
+ 
 
 }
 .logo-img{
-  position: relative;
+  position: absolute;
   left:13px;
-  top: -24px;
-  width: 40px;
-  height: 40px;
-  border-radius: 23px;
-  border: 2px solid rgba(235, 149, 180, 1);
+  top: 28px;
+  width: 60px;
+  height: 60px;
+  border-radius: 32px;
+  border: 2px solid rgba(229, 128, 165, 1);
   filter: brightness(.97);
-}
+  z-index: 1000;
+}                               
+
 
 .try{
   position: relative;
@@ -106,13 +127,13 @@ body {
   letter-spacing: 1px;
   text-align: center;
   left: 50%;
-  top: 80px;
+  top: 30px;
   transform: translate(-50%, -50%); 
   border: none;
   transition:  0.1s ease; 
 }
 button:active{
-  background-color:black;
+  background-color:rgb(0, 0, 0);
   color: rgba(251, 220, 217, 1);
   transform: scale(0.99);
 }
@@ -121,6 +142,27 @@ button:active{
   text-align: center;
   padding: 40px;
   margin: 0px 30px;
+  font-family: "Carlito";
+  font-weight: 400;
+  font-style: normal; 
+}
+@media (min-width: 750px) {
+  .hero{
+    font-size: 34px;
+  }
+  .discover{
+    font-size: 20px;
+  }
+  .logo-img{
+    left:26px;
+    top: 34px;
+    width: 90px;
+    height: 90px;
+    border-radius: 52px;
+  }
+  .abt{
+    font-size: 26px;
+  }
 }
 .pro{
   padding:30px 60px;
@@ -130,63 +172,114 @@ button:active{
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); 
  
 }
-.bracelets{
+.bracelets {
   background-color: rgba(251, 220, 217, 1);
   padding: 60px 0px;
   margin: 0px 30px;
   margin-bottom: 0px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Default: 1 column */
+  gap: 0px;
 }
+@media (min-width: 329px) and (max-width: 749px) {
+  .bracelets {
+    margin: 0 auto; 
+    width: 90%; 
+    max-width: 329px;
+  }
+}
+@media (min-width: 750px) {
+  .bracelets {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for screens ≥ 750px */
+  }
+}
+
+@media (min-width: 1100px) {
+  .bracelets {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for screens ≥ 1100px */
+  }
+}
+
+@media (min-width: 1440px) {
+  .bracelets {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for screens ≥ 1440px */
+  }
+}
+
+
+
 .pro-img{
   width: 250px;
   height: 180px;
-  position: relative;
-  left: 45%;
-  right: 50%;
-  transform: translate(-50%, 0%); 
-  display:flex;
+  padding-inline: 16px;
+  margin-bottom: 30px;
+  margin-top: 18px;
+}
 
- 
+.whole{
+  background-color: rgb(255, 255, 255);
+  margin:0px 22px;
+  margin-bottom: 50px;
+  padding: 5px 0px 0px 0px;
+  border: 1px solid #c4c4c4;
+  width: 284px;
+
+
 }
 .stock{
   font-size:14px;
   margin-left: 8px;
   color: rgb(30, 144, 32);
   margin-top: 0px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
  
   
 }
 .dis{
-  margin:10px 30px;
-  padding-bottom: 0px;
+
   margin-bottom: 0px;
+  font-size: small;
+  padding-right: 10px;
+  padding-left: 20px;
+ 
+ 
 }
 .price{
   font-size:25px;
-  margin-top: 9px;
+  margin-top: 25px;
+  font-family: "Carlito";
+  font-weight: 400;
+  font-style: normal;
   
 }
 .stock,.buy{
   display: inline-block;
   vertical-align: text-top;
+  font-family: "Carlito";
+  font-weight: 400;
+  font-style: normal;
   
 }
 .buy-btn{
   position: absolute;
-  right: 100px;
-  margin-bottom:40px;
+  margin-left: 70px;
+  margin-bottom:80px;
   background: rgba(251, 220, 217, 1);
-  border: 1px solid  #000000;
+  border: 1px solid #c4c4c4;
   color: #000000;
-  padding: 5px 17px;
+  padding: 4px 17px;
   font-size: 20px;
-  box-shadow: 5px 2px 4px rgba(0, 0, 0, 0.3); 
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
 }
-
+.buy-btn:hover{
+  background:black;
+  border: none;
+  color:  rgba(251, 220, 217, 1);
+}
 
 .custom{
   padding:28px 60px;
-  margin-top: 0px;
+  margin-top: -10px;
   background-color: black;
   color: rgba(251, 220, 217, 1);
   font-size: 26px;
@@ -263,6 +356,26 @@ button:active{
   border:none;
   color: rgba(251, 220, 217, 1);
  
+}
+.options label:active {
+  background :black;
+  border:none;
+  color: rgba(251, 220, 217, 1);
+ 
+}
+.options input[type="radio"]:checked + label {
+  background: black !important;
+  border: none !important ;
+  color: rgba(251, 220, 217, 1) !important;
+}
+
+
+@media (hover: none) {
+  .options label:hover {
+    background :black;
+    border:none;
+    color: rgba(251, 220, 217, 1);
+  }
 }
 
 input[type="radio"] {
