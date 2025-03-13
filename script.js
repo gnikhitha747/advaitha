@@ -2,11 +2,12 @@ let currentQuestion = 0;
 const questions = document.querySelectorAll(".question");
 
 document.addEventListener("DOMContentLoaded", () => {
-    updateQuestions();  // Ensure questions are set up correctly when page loads
+    updateQuestions();
+    addRadioButtonListeners(); // Add event listeners to radio buttons
 });
 
 function updateQuestions() {
-    questions.forEach((q, index) => { 
+    questions.forEach((q, index) => {
         if (index === currentQuestion) {
             q.classList.add("active");
         } else {
@@ -16,7 +17,6 @@ function updateQuestions() {
 
     document.getElementById("prevBtn").style.display = currentQuestion === 0 ? "none" : "inline-block";
     document.getElementById("nextBtn").style.display = currentQuestion === questions.length - 1 ? "none" : "inline-block";
-
     document.getElementById("submitBtn").style.display = currentQuestion === questions.length - 1 ? "block" : "none";
     document.getElementById("engraving").style.display = currentQuestion === questions.length - 1 ? "block" : "none";
 }
@@ -33,6 +33,15 @@ function prevQuestion() {
         currentQuestion--;
         updateQuestions();
     }
+}
+
+function addRadioButtonListeners() {
+    const radioButtons = document.querySelectorAll('.options input[type="radio"]');
+    radioButtons.forEach(radio => {
+        radio.addEventListener('change', () => {
+            nextQuestion(); // Move to the next question immediately
+        });
+    });
 }
 
 function submitOrder() {
@@ -68,6 +77,8 @@ function sendEmail(product, price) {
     window.location.href = `mailto:advaithabeadsyourway@gmail.com?subject=${subject}&body=${body}`;
 }
 
+const hamMenu = document.querySelector('.ham-menu');
+const menu = document.querySelector('.menu');
 
 document.querySelector(".try").addEventListener("click", function() {
     document.getElementById("Customize").scrollIntoView({ behavior: "smooth" });
